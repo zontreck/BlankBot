@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="libremetaverse\**" />
+    <EmbeddedResource Remove="libremetaverse\**" />
+    <None Remove="libremetaverse\**" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <Compile Remove="Core5\**" />
+    <EmbeddedResource Remove="Core5\**" />
+    <None Remove="Core5\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="libremetaverse\LibreMetaverse.StructuredData\LibreMetaverse.StructuredData.csproj" />
+    <ProjectReference Include="libremetaverse\LibreMetaverse.Utilities\LibreMetaverse.Utilities.csproj" />
+    <ProjectReference Include="libremetaverse\LibreMetaverseTypes\LibreMetaverse.Types.csproj" />
+    <ProjectReference Include="libremetaverse\LibreMetaverse\LibreMetaverse.csproj" />
+    <ProjectReference Include="Core5\Bot.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
