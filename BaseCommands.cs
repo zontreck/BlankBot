@@ -28,7 +28,7 @@ namespace BlankBot
             }
         }
         [CommandGroupMaster("Base")]
-        [CommandGroup("assign",0,1, "assign [string:DLLName] - Sets DLLName as the active program", MessageHandler.Destinations.DEST_LOCAL | MessageHandler.Destinations.DEST_GROUP | MessageHandler.Destinations.DEST_AGENT)]
+        [CommandGroup("assign_prog",0,1, "assign [string:DLLName] - Sets DLLName as the active program", MessageHandler.Destinations.DEST_LOCAL | MessageHandler.Destinations.DEST_GROUP | MessageHandler.Destinations.DEST_AGENT)]
         public void assignDLL(UUID client, int level, GridClient grid, string[] additionalArgs,
                                 MessageHandler.MessageHandleEvent MHE, MessageHandler.Destinations source,
                                 CommandRegistry registry, UUID agentKey, string agentName)
