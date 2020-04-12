@@ -23,7 +23,7 @@ jobs:
     - name: Restore Dependencies
       run: dotnet restore
     - name: Checkout BotCore5
-      run: cd ..; git clone https://github.com/zontreck/BotCore5 Bot;cd Bot; git submodule update --init --recursive; dotnet restore; cd ../OpenCollarBot
+      run: cd ..; git clone https://github.com/zontreck/BotCore5 Bot;cd Bot; git submodule update --init --recursive; dotnet restore; cd ../BlankBot
     - name: Build
       run: dotnet build --configuration Release
     - name: Upload Artifact
