@@ -20,13 +20,6 @@
     <None Remove="libremetaverse\**" />
   </ItemGroup>
 
-  
-  <ItemGroup>
-    <Compile Remove="Core5\**" />
-    <EmbeddedResource Remove="Core5\**" />
-    <None Remove="Core5\**" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
@@ -36,7 +29,7 @@
     <ProjectReference Include="libremetaverse\LibreMetaverse.Utilities\LibreMetaverse.Utilities.csproj" />
     <ProjectReference Include="libremetaverse\LibreMetaverseTypes\LibreMetaverse.Types.csproj" />
     <ProjectReference Include="libremetaverse\LibreMetaverse\LibreMetaverse.csproj" />
-    <ProjectReference Include="Core5\Bot.csproj" />
+    <ProjectReference Include="..\Bot\Bot.csproj" />
   </ItemGroup>
 
   <ItemGroup>
